@@ -69,6 +69,9 @@ class User:
         else:
             print('Invalid account type')
 
+    # def user_logout(self, ):
+    #     user = user.logout
+
 
 class Account:
     def __init__(self, account_type):
@@ -77,13 +80,19 @@ class Account:
 
     def deposit(self, amount):
         self.balance += amount
-        choice.deposit = amount
+    
 
     def withdraw(self, amount):
         self.balance -= amount
 
     def get_balance(self):
         return self.balance
+    
+    def view_trasaction(self):
+        self.trasaction = []
+        for transaction in self.transactions:
+            print(transaction["type"], ":", transaction["amount"])
+        
     
 class Transaction:
     def __init__(self, transaction_type, amount, account):
@@ -125,11 +134,11 @@ while True:
         if user:
             print('Login successful. Welcome,', user.name)
 
-    elif choice == '3':
-      break
-    else:
-      print("Invalid choice")
-      continue
+    # elif choice == '3':
+    #   break
+    # else:
+    #   print("Invalid choice")
+    #   continue
 
     while choice:
             print("1. Deposit")
@@ -140,12 +149,17 @@ while True:
             choice = input("Enter choice: ")
             if choice == "1":
                 amount = float(input("Enter amount to deposit: "))
-                choice.deposit(amount)
+                # choice.deposit(amount)
                 print(f"Deposit of {amount} successful")
             elif choice == "2":
-                recipient_email = input("Enter recipient email: ")
+                recipient_account = input("Enter recipient account number: ")
                 amount = float(input("Enter amount: "))
+                print(f"Transfer of {amount} successful")
+
+
+            # elif choice == "3":
+            #     recipient_history = input("Enter recipient account number: ")
+            #     amount = float(input("Enter amount: "))
+            #     print(f"Total trasaction {amount}")
                 
-                
-                # print('1. Deposit')
-                # print('2. withdraw')
+                           
