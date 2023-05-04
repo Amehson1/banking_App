@@ -85,41 +85,6 @@ class Account:
     def get_balance(self):
         return self.balance
     
-#     # create an instance of Account
-# account = Account("checking")
-
-#     # assign account to choice
-# choice = account
-
-#     # call the deposit method on choice and set choice.deposit to amount
-# amount = 100
-# choice.deposit(amount)
-# choice.deposit = amount  # set choice.deposit to amount
-
-# print(choice.balance)  # prints 100
-    
-# class BankAccount:
-#     def __init__(self):
-#         self.balance = 0
-
-#     def deposit(self, amount):
-#         self.balance += amount
-#         print(f"Deposited {amount}. New balance is {self.balance}.")
-
-#     # create an instance of BankAccount
-#     # account = BankAccount()
-
-#     # assign account to choice
-#     choice = Account
-
-#     # call the deposit method on choice
-#     amount = 100
-#     choice.deposit(amount)
-
-
-
-
-
 class Transaction:
     def __init__(self, transaction_type, amount, account):
         self.transaction_type = transaction_type
